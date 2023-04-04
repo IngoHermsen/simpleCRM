@@ -8,14 +8,19 @@ import { TitlebarComponent } from './titlebar/titlebar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { SidebarmenuentriesComponent } from './sidebarmenuentries/sidebarmenuentries.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TitlebarComponent,
-    SidebarComponent
+    SidebarmenuentriesComponent,
+    DashboardComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +28,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     BrowserAnimationsModule,
     MatIconModule,
     MatToolbarModule,
-    NgbModule
+    NgbModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

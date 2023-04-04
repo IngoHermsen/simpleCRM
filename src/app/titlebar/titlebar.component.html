@@ -1,6 +1,13 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <mat-icon>menu</mat-icon>
-    <span>My App</span>
-  </mat-toolbar-row>
-</mat-toolbar>
+<mat-drawer-container class="vh-100" autosize>
+  <mat-drawer #drawer [opened]="true" class="px-16 sidenav" mode="side">
+    <div class="ps-3 logo-container">Platz für ein Logo</div>
+    <div class="mt-3 menu-entries-container"></div><app-sidebarmenuentries></app-sidebarmenuentries>
+  </mat-drawer>
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <mat-icon class="me-3 menu-button" (click)="drawer.toggle()">menu</mat-icon>
+      <span>My App</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</mat-drawer-container>
