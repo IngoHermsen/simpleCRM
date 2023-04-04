@@ -6,8 +6,13 @@
 
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <mat-icon class="me-3 menu-button" (click)="drawer.toggle()">menu</mat-icon>
+      <div class="me-3 menu-button-container">
+        <mat-icon class="menu-button" (click)="drawer.toggle()">menu</mat-icon>
+      </div>
       <span>My App</span>
     </mat-toolbar-row>
   </mat-toolbar>
+  <div class="ms-4 mt-4">
+    <router-outlet></router-outlet>
+  </div>
 </mat-drawer-container>

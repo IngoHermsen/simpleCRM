@@ -1,13 +1,20 @@
-.menu-button {
-    cursor: pointer;
+.menu-button-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    transition: background-color 125ms ease-in;
 
     &:hover {
-        transform: scale(1.1);
-        transition: transform 75ms ease-out;
+        cursor: pointer;
+        background-color: rgba(255,255,255,0.2);
+        transition: background-color 125ms ease-in;
     }
-    &:active {
-        transform: scale(0.8)
-    }
+
 }
 
 .sidenav {
@@ -15,6 +22,8 @@
 }
 
 .logo-container {
+    cursor: pointer;
+    user-select: none;
     display: flex;
     align-items: center;
     height: 64px;
