@@ -12,7 +12,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidebarmenuentriesComponent } from './sidebarmenuentries/sidebarmenuentries.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserComponent } from './user/user.component';
-
+import {MatButtonModule} from '@angular/material/button';
+import { DialogAddUserComponent } from './dialog-add-user/dialog-add-user.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UserComponent } from './user/user.component';
     SidebarmenuentriesComponent,
     DashboardComponent,
     UserComponent,
+    DialogAddUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { UserComponent } from './user/user.component';
     MatIconModule,
     MatToolbarModule,
     NgbModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

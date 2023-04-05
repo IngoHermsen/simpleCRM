@@ -6,7 +6,7 @@ li {
     height: 48px;
     padding-left: 16px;
 
-    &:hover {
+    &:hover, &:focus {
         background-color: rgba(0,0,0,0.1)
     }
 
