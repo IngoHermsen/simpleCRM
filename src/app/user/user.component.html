@@ -1,3 +1,32 @@
+<mat-card>
+    <mat-card-content>
+        <table class="w-100">
+            <tr>
+                <th>Name</th>
+                <th>street</th>
+                <th>City</th>
+            </tr>
+            <tr class="user-table-row" *ngFor="let user of allUsers$ | async">
+                <td>
+                    {{ user.firstName }} {{ user.lastName }}
+                </td>
+                <td>
+                    {{ user.street }}
+                </td>
+                <td>
+                    {{ user.zipCode }} {{ user.city }}
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>first name</td>
+                <td>last name</td>
+                <td>city</td>
+            </tr> -->
+
+        </table>
+    </mat-card-content>
+</mat-card>
+
 <div class="add-user-button-container">
     <button (click)="openDialog()" mat-fab color="primary">
         <mat-icon>add</mat-icon>

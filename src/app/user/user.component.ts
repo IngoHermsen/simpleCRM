@@ -13,12 +13,11 @@ import { Observable } from 'rxjs';
 })
 export class UserComponent {
   firestore: Firestore = inject(Firestore);
-  users$: Observable<any[]>;
+  allUsers$: Observable<any[]>;
 
   constructor(public dialog: MatDialog) {
     const usersCollection = collection(this.firestore, 'users');
-    this.users$ = collectionData(usersCollection);
-    console.log(this.users$)
+    this.allUsers$ = collectionData(usersCollection);
   }
   
   openDialog() {
