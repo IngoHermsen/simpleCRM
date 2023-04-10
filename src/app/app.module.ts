@@ -27,7 +27,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

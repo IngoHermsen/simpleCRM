@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
-import { User } from 'src/models/user.class';
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+
 
 
 @Component({
@@ -10,13 +12,20 @@ import { User } from 'src/models/user.class';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent {
-  user = new User(); 
+  firestore: Firestore = inject(Firestore);
+  users$: Observable<any[]>;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog) {
+    const usersCollection = collection(this.firestore, 'users');
+    this.users$ = collectionData(usersCollection);
+    console.log(this.users$)
+  }
   
   openDialog() {
     let dialogRef = this.dialog.open(DialogAddUserComponent, {
     });
   }
+
+  
 
 }
