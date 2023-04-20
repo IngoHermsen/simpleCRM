@@ -3,8 +3,10 @@
         <table class="w-100">
             <tr>
                 <th>Name</th>
-                <th>street</th>
+                <th>Sreet</th>
                 <th>City</th>
+                <th>E-Mail</th>
+
             </tr>
             <tr class="user-table-row" *ngFor="let user of allUsers$ | async">
                 <td>
@@ -15,6 +17,9 @@
                 </td>
                 <td>
                     {{ user.zipCode }} {{ user.city }}
+                </td>
+                <td>
+                    {{ user.email }}
                 </td>
             </tr>
             <!-- <tr>
