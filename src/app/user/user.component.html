@@ -3,12 +3,12 @@
         <table class="w-100">
             <tr>
                 <th>Name</th>
-                <th>Sreet</th>
+                <th>Street</th>
                 <th>City</th>
                 <th>E-Mail</th>
 
             </tr>
-            <tr class="user-table-row" *ngFor="let user of allUsers$ | async">
+            <tr class="user-table-data-row" *ngFor="let user of allUsers$ | async">
                 <td>
                     {{ user.firstName }} {{ user.lastName }}
                 </td>

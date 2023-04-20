@@ -8,11 +8,18 @@ th {
     color: rgba(0,0,0,0.6)
 }
 
-.user-table-row {
-    border-bottom: 1px solid rgba(0,0,0,0.3);
+.user-table-data-row {
+    &:not(:last-of-type) {
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+
+    cursor: pointer;
 
     td {
-        padding: 8px 0px;
+        padding: 12px 0px;
+    }
 
+    &:hover {
+        background-color: rgba(0,0,0,0.1);
     }
 }
